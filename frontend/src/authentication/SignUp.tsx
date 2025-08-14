@@ -198,7 +198,7 @@ const [confirmPasswordError, setConfirmPasswordError] = useState("");
             <Box component="form" onSubmit={handleSubmit}>
               <Grid container spacing={1}>
                 {/* First Name & Last Name */}
-                <Grid size={7}>
+                <Grid xs={7}>
                   <TextField
                     required
                     label="First Name"
@@ -213,7 +213,7 @@ const [confirmPasswordError, setConfirmPasswordError] = useState("");
                     sx={{ '& .MuiOutlinedInput-root fieldset': { borderColor: 'white' } }}
                   />
                 </Grid>
-                <Grid size={5}>
+                <Grid xs={5}>
                   <TextField
                     required
                     label="Last Name"
@@ -230,7 +230,7 @@ const [confirmPasswordError, setConfirmPasswordError] = useState("");
                 </Grid>
 
                 {/* Email & DOB */}
-                <Grid size={8}>
+                <Grid xs={8}>
                   <TextField
   required
   label="Email"
@@ -253,7 +253,7 @@ const [confirmPasswordError, setConfirmPasswordError] = useState("");
                 </Grid>
 
                 {!isOtpSent && (
-                  <Grid size={12}>
+                  <Grid xs={12}>
                     <Button
                       variant="contained"
                       color="primary"
@@ -268,7 +268,7 @@ const [confirmPasswordError, setConfirmPasswordError] = useState("");
                 {/* OTP Input & Verify */}
                 {isOtpSent && !isEmailVerified && (
                   <>
-                    <Grid size={8}>
+                    <Grid xs={8}>
                       <TextField
                         label="Enter OTP"
                         value={otp}
@@ -278,7 +278,7 @@ const [confirmPasswordError, setConfirmPasswordError] = useState("");
                         InputProps={inputStyles}
                       />
                     </Grid>
-                    <Grid size={4}>
+                    <Grid xs={4}>
                       <Button
                         variant="contained"
                         color="primary"
@@ -293,7 +293,7 @@ const [confirmPasswordError, setConfirmPasswordError] = useState("");
 
                 {isEmailVerified && (
                   <>
-                    <Grid size={6}>
+                    <Grid xs={6}>
                       <TextField
                         label="Date of Birth"
                         type="date"
@@ -304,7 +304,7 @@ const [confirmPasswordError, setConfirmPasswordError] = useState("");
                         InputProps={inputStyles}
                       />
                     </Grid>
-                    <Grid size={6}>
+                    <Grid xs={6}>
                       <TextField
                         label="Pincode"
                         value={pincode}
@@ -314,7 +314,7 @@ const [confirmPasswordError, setConfirmPasswordError] = useState("");
                         InputProps={inputStyles}
                       />
                     </Grid>
-                    <Grid size={6}>
+                    <Grid xs={6}>
                       <FormControl fullWidth>
                         <InputLabel sx={{ color: "white" }}>City</InputLabel>
                         <Select
@@ -328,7 +328,7 @@ const [confirmPasswordError, setConfirmPasswordError] = useState("");
                         </Select>
                       </FormControl>
                     </Grid>
-                    <Grid size={6}>
+                    <Grid xs={6}>
   <TextField
     required
     label="Password"
@@ -342,7 +342,7 @@ const [confirmPasswordError, setConfirmPasswordError] = useState("");
     sx={{ '& .MuiOutlinedInput-root': { '& fieldset': { borderColor: 'white' } } }}
   />
 </Grid>
-<Grid size={6}>
+<Grid xs={6}>
   <TextField
     required
     label="Confirm Password"
@@ -358,14 +358,14 @@ const [confirmPasswordError, setConfirmPasswordError] = useState("");
     sx={{ '& .MuiOutlinedInput-root': { '& fieldset': { borderColor: 'white' } } }}
   />
 </Grid>
-                    <Grid size={12}>
+                    <Grid xs={12}>
                       <FormControlLabel
                         control={<Checkbox sx={{ color: "white" }} />}
                         label="I agree to the Terms and Conditions"
                         sx={{ color: "white" }}
                       />
                     </Grid>
-                    <Grid size={12}>
+                    <Grid xs={12}>
                       <Button variant="contained" type="submit" fullWidth>
                         Sign Up
                       </Button>
@@ -373,7 +373,7 @@ const [confirmPasswordError, setConfirmPasswordError] = useState("");
                   </>
                 )}
 
-                <Grid size={12} textAlign="center">
+                <Grid xs={12} textAlign="center">
                   <Link to="/signin" style={{ color: "#1976d2" }}>
                     Already have an account? Sign In
                   </Link>
