@@ -1,0 +1,99 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: none; /* remove direct background from body */
+  box-sizing: border-box;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('./assets/bgimage.png') no-repeat center center fixed;
+  background-size: cover;
+  z-index: -1;
+}
+
+.page-wrapper {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+}
+
+.brand {
+  color: #1976d2;
+  margin: 0;
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.tagline {
+  color: #faf8f8;
+  font-size: 1.15rem;
+  font-weight: 500;
+  margin-left: 27px;
+}
+
+.main-content {
+  flex: 1 1 0;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  padding: 0 2vw 2vw 2vw;
+}
+
+@media (max-width: 800px) {
+  .main-content {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 0.5rem 1rem 0.5rem;
+  }
+}
+
+.left-container,
+.right-container {
+  flex: 1 1 0;
+  max-width: 40rem;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.welcome-title {
+  color: #1976d2;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.description {
+  color: #f7f4f4;
+  font-size: 1.12rem;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.right-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 1rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+}
